@@ -1968,16 +1968,7 @@
 /* Text Elements */
 
     /* Standart block quote */
-    blockquote {
-        font-size:13px;
-        line-height: 18px;
-        position:relative;
-        color:#909090;
-        text-shadow: 1px 1px 0px  #fff;
-        width:auto;
-        margin:0 0 20px 0;
-        background:url(../images/blockquote.png) left 0 no-repeat;
-    }
+
 
     blockquote p{
         padding:10px 10px 0 50px;
@@ -3078,4 +3069,32 @@ ul.sub-menu .sub-menu {
 }
 .fb_iframe_widget iframe {
     position: relative!important;
+}
+/* blockquote */
+blockquote {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+}
+blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #7a7a7a;
+}
+blockquote cite {
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+ 
+blockquote cite:before {
+    content: "\2014 \2009";
 }

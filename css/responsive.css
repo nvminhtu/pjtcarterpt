@@ -601,3 +601,9 @@ ul.footer_menu li a:hover {
 .content textarea {
   width: 95%;
 }
+.featured-page img {
+  width: 100%;
+}
+blockquote p {
+  padding:10px 10px 0 20px; 
+}

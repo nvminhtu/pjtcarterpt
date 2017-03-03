@@ -39,6 +39,10 @@
      
     <div class="blog single">
       <div class="box blog_full first">
+        <div class="wp-socializer-buttons clearfix">
+          <span class="wpsr-btn"><?php echo do_shortcode('[wpsr_facebook]'); ?></span>
+          <span class="wpsr-btn"><?php echo do_shortcode('[wpsr_plusone]'); ?></span>
+        </div>
          <?php
             //get the image url
             $image_id = get_post_thumbnail_id();
@@ -49,29 +53,32 @@
           <?php if($blog_full_width):?>
             <span class="aligncenter">
           <?php endif;?>
-
-          <span class="border"> 
-           <a href="<?php echo $image_url;?>" title="<?php the_title(); ?>" rel="prettyPhoto[rt_theme_blog_<?php echo $post->ID;?>]" class="imgeffect plus">
-               <!-- blog image-->
-                <?php       
-                if(!get_option('rttheme_blog_resize'))://RT-Theme resize option is enabled
-                ?>
-                <img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image_url?>&amp;w=<?php echo $width;?>&amp;zc=1" alt="<?php the_title(); ?>" />
-                <?php else://use the post thumbnail ?>
-                     <?php
-                     $default_attr = array();
-                     echo get_the_post_thumbnail($post->ID,array($width, 1000),$default_attr);
-                     ?>         
-                <?php endif;?>
-            <!-- / blog image -->
-          </a></span>
+               <span class="border"> 
+                 <a href="<?php echo $image_url;?>" title="<?php the_title(); ?>" rel="prettyPhoto[rt_theme_blog_<?php echo $post->ID;?>]" class="imgeffect plus">
+                     <!-- blog image-->
+                      <?php       
+                      if(!get_option('rttheme_blog_resize'))://RT-Theme resize option is enabled
+                      ?>
+                      <img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image_url?>&amp;w=<?php echo $width;?>&amp;zc=1" alt="<?php the_title(); ?>" />
+                      <?php else://use the post thumbnail ?>
+                           <?php
+                           $default_attr = array();
+                           echo get_the_post_thumbnail($post->ID,array($width, 1000),$default_attr);
+                           ?>         
+                      <?php endif;?>
+                  <!-- / blog image -->
+                </a></span>
+          
+          <div class="col_right">
+            <?php the_content(); ?>
+          </div>
           <?php if($blog_full_width):?>
             </span>
           <?php endif;?>
       </div>
     </div>
 
-    <?php the_content(); ?>
+    
     
     <?php  echo do_shortcode("[wp_social_sharing social_options='facebook,twitter,googleplus' twitter_username='arjun077' facebook_text='Share on Facebook' twitter_text='Share on Twitter' googleplus_text='Share on Google+' icon_order='f,t,g,l,p,x' show_icons='0' before_button_text='' text_position='' social_image='']");  ?>
 

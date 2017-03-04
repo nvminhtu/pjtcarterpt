@@ -40,8 +40,8 @@
     <div class="blog single">
       <div class="box blog_full first">
         <div class="wp-socializer-buttons clearfix">
-          <span class="wpsr-btn"><?php echo do_shortcode('[wpsr_facebook]'); ?></span>
-          <span class="wpsr-btn"><?php echo do_shortcode('[wpsr_plusone]'); ?></span>
+          <span class="wpsr-btn"><div class="fb-like" data-href="<?php echo get_permalink($post->ID); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div></span>
+          <span class="wpsr-btn"><div class="g-plusone" data-size="medium" data-annotation="none"></div></span>
         </div>
          <?php
             //get the image url

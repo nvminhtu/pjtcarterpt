@@ -3098,3 +3098,16 @@ blockquote cite {
 blockquote cite:before {
     content: "\2014 \2009";
 }
+.social_list {
+    width: 100%;
+}
+.social_list {
+    float: left;
+}
+.data_list {
+    float: left;
+}
+.tweet-btn {
+    float: left;
+    margin-right: 10px;
+}

@@ -3044,3 +3044,15 @@
 .wp-socializer-buttons iframe {
     height: 20px!important;
 }
+.social_list {
+    width: 100%;
+}
+.social_list {
+    float: left;
+}
+.data_list {
+    float: left;
+} 
+.border {
+    margin-right: 15px;
+}

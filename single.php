@@ -39,15 +39,27 @@
 
     <div class="blog single">
       <div class="box blog_full first">
-        <?php
-            if(function_exists('display_social4i'))
-            echo display_social4i("small","float-left");
+        <div class="social_list">
+          <a class="tweet-btn" href="https://twitter.com/share?
+              url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&
+              via=twitterdev&
+              related=twitterapi%2Ctwitter&
+              hashtags=example%2Cdemo&
+              text=custom%20share%20text" target="_blank">
+            <img src="<?php bloginfo('template_url'); ?>/images/btn-tweet.png">
+          </a> 
+          <?php
+              if(function_exists('display_social4i'))
+                echo display_social4i("small","float-left"); ?>
+        </div>
+        <div class="data_list">
+           <?php
             //get the image url
             $image_id = get_post_thumbnail_id();
             $image_url = wp_get_attachment_image_src($image_id,'large', true);
             $image_url = $image_url[0];
           ?>
-
+  
           <?php if($blog_full_width):?>
             <span class="aligncenter">
           <?php endif;?>
@@ -73,6 +85,8 @@
           <?php if($blog_full_width):?>
             </span>
           <?php endif;?>
+        </div>
+       
       </div>
     </div>
 
